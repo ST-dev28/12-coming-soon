@@ -1,3 +1,5 @@
-// import
+// IMPORT
+import { Clock } from "./components/clock/Clock.js";
 
-// execution
+// EXECUTION
+Clock('#clock_1');
