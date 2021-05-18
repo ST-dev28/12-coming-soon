@@ -14,18 +14,19 @@
 
 /* CUSTOM STYLE BELOW THIS COMMENT */
 
- .bg-primary {
-     background-color: var(--color-primary);
- }
-
- .bg-secondary {
+.bg-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .bg-secondary {
     background-color: var(--color-secondary);
-}
-
-.container.hero {
-    padding: 25px;
-}
-
-footer.container {
+  }
+  
+  .container.hero {
+    padding-bottom: 25px;
+  }
+  
+  footer.container {
     padding-top: 0;
-}
+  }
+  
