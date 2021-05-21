@@ -4,6 +4,7 @@ class Clock {
         this.targetDate = targetDate;
 
         this.DOM = null;
+        this.allValuesDOM = null;
 
         this.init();
     }
@@ -14,6 +15,7 @@ class Clock {
         }
 
         this.render();
+        this.updateClock();
     }
 
     isValidSelector() {
@@ -48,6 +50,7 @@ class Clock {
 
         return updatedTime;
     }
+
 /*
 issitraukiame "einamieji-metai" (2021)
 susikonstruojame einamuju metu gimtadienio (this.targetDate) laika (A)
@@ -64,7 +67,7 @@ kadangi jau nustatem kelintais metais pagal duota this.targetDate bus tas gimtad
 
 apskaiciuotas laikas (d, v, m, s) grazinamos array formatu
 */
-    calcDeadline() {
+     calcDeadline() {
         const dabartinisLaikas = new Date();
         const einamiejiMetai = dabartinisLaikas.getFullYear();
 
@@ -95,6 +98,15 @@ apskaiciuotas laikas (d, v, m, s) grazinamos array formatu
         return [dienos, valandos, minutes, likusiosSekundes];
     }
 
+    updateClock() {
+        setInterval(() => {
+            const timeValues = this.formatTime(this.calcDeadline());
+            for (let i = 0; i < 4; i++) {
+                this.allValuesDOM[i].innerText = timeValues[i];
+            }
+        }, 1000)
+    }
+
     render() {
         const timeValues = this.formatTime(this.calcDeadline());
         const labelValues = ['Days', 'Hours', 'Minutes', 'Seconds'];
@@ -108,23 +120,8 @@ apskaiciuotas laikas (d, v, m, s) grazinamos array formatu
         }
 
         this.DOM.innerHTML = HTML;
+        this.allValuesDOM = this.DOM.querySelectorAll('.value');
     }
 }
-
-// function Clock(selector) {
-//     const DOM = document.querySelector(selector);
-//     const timeValues = [432, 9, 37, 39];
-//     const labelValues = ['Days', 'Hours', 'Minutes', 'Seconds'];
-//     let HTML = '';
-
-//     for (let i = 0; i < timeValues.length; i++) {
-//         HTML += `<div class="time">
-//                     <div class="value">${timeValues[i]}</div>
-//                     <div class="label">${labelValues[i]}</div>
-//                 </div>`;
-//     }
-
-//     DOM.innerHTML = HTML;
-// }
 
 export { Clock }
