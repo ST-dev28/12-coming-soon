@@ -50,7 +50,7 @@ class Clock {
     }
 
     render() {
-        const timeValues = this.formatTime([432, 9, 37, 39]);
+        const timeValues = this.formatTime([2, 9, 37, 39]);
         const labelValues = ['Days', 'Hours', 'Minutes', 'Seconds'];
         let HTML = '';
 

@@ -1,5 +1,6 @@
 const clockData = '04-19 18:00:00';
 
+
 // ARBA kaip objekta: 
 //const clockData = {
 //     month: 4,
