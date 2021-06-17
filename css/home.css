@@ -88,7 +88,6 @@ main p a:hover {
 footer.container {
   padding-top: 0;
 }
-
 .socials {
   display: flex;
   gap: 10px;
@@ -111,4 +110,45 @@ footer.container {
 .socials > .fa:hover {
   background-color: var(--color-light);
   color: var(--color-primary);
+}
+.bottom-texts {
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;*/
+  text-align: center;
+  color: #fff8;
+  font-size: 18px;
+  line-height: 1.7em;
+}
+.footer-logo {
+  margin: 30px 0;
+}
+.triple {
+  display: flex;
+  gap: 0 30px;
+}
+.triple > p {
+  position: relative;
+  border-style: ;
+}
+.triple > p > a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+.triple > p > a:hover {
+  text-decoration: underline;
+}
+.triple > .footer-description {
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  color: #fff8;
+  position: absolute;
+  /*top: 50%;
+  left: -15px;
+  transform: translateY(-50%);*/
+}
+.footer-description > a {
+  color: #fff;
+  text-decoration: none;
 }
