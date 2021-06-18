@@ -112,43 +112,57 @@ footer.container {
   color: var(--color-primary);
 }
 .bottom-texts {
-  /*display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;*/
+  align-items: center;
   text-align: center;
   color: #fff8;
   font-size: 18px;
   line-height: 1.7em;
 }
 .footer-logo {
+  height: 50px;
   margin: 30px 0;
 }
 .triple {
   display: flex;
+  justify-content: center;
   gap: 0 30px;
 }
-.triple > p {
+.triple p {
   position: relative;
-  border-style: ;
 }
-.triple > p > a {
+.triple a {
   color: var(--color-light);
   text-decoration: none;
 }
 .triple > p > a:hover {
   text-decoration: underline;
 }
-.triple > .footer-description {
+/*kuriam pseudo elementa  ::*/
+.triple > p + p::before {
   display: inline-block;
+  /*duodame turini*/
+  content: '';
+  /* kuriam turini*/
   width: 1px;
   height: 15px;
-  color: #fff8;
+  background-color: #fff8;
   position: absolute;
-  /*top: 50%;
+  top: 50%;
   left: -15px;
-  transform: translateY(-50%);*/
+  /*keliam i virsu per puse elemento aukscio*/
+  transform: translateY(-50%);
 }
 .footer-description > a {
   color: #fff;
   text-decoration: none;
+}
+@media (max-width: 640px) {
+  .triple {
+    flex-direction: column;
+  }
+  .triple > p + p::before {
+    display: none;
+  }
 }
