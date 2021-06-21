@@ -1,0 +1,31 @@
+.mouse {
+  width: 27px;
+  height: 45px;
+  margin-top: 20px;
+  background-color: unset;
+  border: 3px solid #fff9;
+  border-radius: 17px;
+}
+.slider {
+  display: inline-block;
+  width: 4px;
+  height: 6px;
+  margin-top: 5px;
+  background-color: #fff;
+  border-radius: 2px;
+  animation: scrolling 1.5s infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(23px);
+  }
+}

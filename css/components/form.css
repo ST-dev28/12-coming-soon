@@ -1,0 +1,35 @@
+.form-row {
+  display: inline-block;
+  width: 100%;
+  margin-top: 60px;
+}
+input {
+  display: inline-block;
+  background-color: unset;
+  width: 100%;
+  font-size: 18px;
+  line-height: 2.4em;
+  border: none;
+  border-bottom: 2px solid #fff9;
+  padding: 0 10px;
+}
+
+::placeholder {
+  color: #fff9;
+  font-style: italic;
+}
+button {
+  background-color: var(--color-secondary);
+  border: none;
+  color: #fff9;
+  margin-top: 40px;
+  padding: 10px 40px 10px 40px;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px #0007;
+}
+
+button:hover {
+  cursor: pointer;
+}
