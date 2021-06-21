@@ -5,6 +5,7 @@
   background-color: unset;
   border: 3px solid #fff9;
   border-radius: 17px;
+  /*position: relative;*/
 }
 .slider {
   display: inline-block;
@@ -13,7 +14,8 @@
   margin-top: 5px;
   background-color: #fff;
   border-radius: 2px;
-  animation: scrolling 1.5s infinite;
+  animation: scrolling 2s infinite;
+  /*position: absolute;*/
 }
 
 @keyframes scrolling {
