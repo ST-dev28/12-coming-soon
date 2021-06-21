@@ -1,33 +1,35 @@
 .mouse {
-  width: 27px;
-  height: 45px;
-  margin-top: 20px;
-  background-color: unset;
-  border: 3px solid #fff9;
-  border-radius: 17px;
-  /*position: relative;*/
+  display: inline-block;
+  width: 34px;
+  height: 55px;
+  border: 4px solid #fff9;
+  border-radius: 20px;
+  position: relative;
 }
-.slider {
+.mouse > .slider {
   display: inline-block;
   width: 4px;
-  height: 6px;
-  margin-top: 5px;
+  height: 8px;
   background-color: #fff;
   border-radius: 2px;
-  animation: scrolling 2s infinite;
-  /*position: absolute;*/
+  position: absolute;
+  top: 8px;
+  left: calc(50% - 2px);
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-@keyframes scrolling {
+@keyframes scroll {
   0% {
-    transform: translateY(0);
+    top: 8px;
     opacity: 1;
   }
-  75% {
-    opacity: 0.5;
+  30% {
+    opacity: 1;
   }
   100% {
+    top: 30px;
     opacity: 0;
-    transform: translateY(23px);
   }
 }
