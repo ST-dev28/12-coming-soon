@@ -3,17 +3,19 @@ button {
   border: none;
   color: #fff9;
   margin-top: 40px;
-  padding: 8px 40px 8px 40px;
+  padding: 8px 40px;
   font-size: 18px;
   line-height: 30px;
   border-radius: 4px;
-  box-shadow: 0 4px 10px #0007;
+  box-shadow: 0 2px 8px #0002;
+  transition: all 0.5s;
 }
 
 button:hover {
   cursor: pointer;
+  box-shadow: 0 4px 10px #0007;
 }
 .btn {
   float: right;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 20px;
 }
