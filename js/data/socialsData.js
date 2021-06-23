@@ -1,11 +1,6 @@
 const socialsData = [
     {
         href: '#',
-        icon: 'angle-up',
-        active: false
-    },
-    {
-        href: '#',
         icon: 'facebook',
         active: true
     },
