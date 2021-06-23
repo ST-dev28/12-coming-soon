@@ -22,16 +22,3 @@
   background-color: var(--color-light);
   color: var(--color-primary);
 }
-.back-to-top {
-  position: absolute;
-  top: -20px;
-  right: -10px;
-}
-.socials > .social:first-child:hover {
-  background-color: var(--color-secondary);
-}
-@media (max-width: 680px) {
-  .back-to-top {
-    display: none;
-  }
-}

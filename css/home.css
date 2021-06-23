@@ -98,7 +98,19 @@ main p a:hover {
 footer.container {
   padding-top: 0;
 }
-
+.back-to-top {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+}
+.socials > .social:first-child:hover {
+  background-color: var(--color-secondary);
+}
+@media (max-width: 680px) {
+  .back-to-top {
+    display: none;
+  }
+}
 .bottom-texts {
   display: flex;
   flex-direction: column;
