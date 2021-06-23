@@ -129,6 +129,12 @@ footer.container {
   top: -20px;
   right: -10px;
 }
+@media (max-width: 640px) {
+  .back-to-top {
+    display: none;
+  }
+}
+
 .bottom-texts {
   display: flex;
   flex-direction: column;
