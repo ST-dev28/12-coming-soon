@@ -12,6 +12,8 @@
 @import './components/form.css';
 @import './components/mouse.css';
 @import './components/progress-bar.css';
+@import './components/button.css';
+@import './components/socials.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT */
 
@@ -56,32 +58,134 @@
 }
 
 /* MAIN CONTENT SECTION */
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  /*align-items: flex-start;*/
+  gap: 30px;
+}
+
+main h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-grey);
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.7em;
+  color: var(--color-grey);
+}
+main p a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+main p a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 1100px) {
+  .details {
+    width: 45%;
+  }
+  .details:nth-of-type(2) {
+    float: right;
+  }
+}
 
 /* FOOTER SECTION */
 footer.container {
   padding-top: 0;
 }
-
-.socials {
+.back-to-top {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+}
+.socials > .social:first-child:hover {
+  background-color: var(--color-secondary);
+}
+@media (max-width: 680px) {
+  .back-to-top {
+    display: none;
+  }
+}
+.bottom-texts {
   display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 15px;
-  border-bottom: 1px solid var(--color-light);
-}
-.socials > .fa {
-  color: var(--color-light);
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  line-height: 40px;
-  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  border-radius: 50%;
-  transition: all 0.5s;
+  color: #fff8;
+  font-size: 18px;
+  line-height: 1.7em;
 }
-.socials > .fa:hover {
-  background-color: var(--color-light);
-  color: var(--color-primary);
+.footer-logo {
+  height: 50px;
+  margin: 30px 0;
+  object-fit: contain;
+  object-position: center;
 }
+.triple {
+  display: flex;
+  justify-content: center;
+  gap: 0 30px;
+}
+.triple p {
+  position: relative;
+}
+.triple a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+.triple > p > a:hover {
+  text-decoration: underline;
+}
+/*kuriam pseudo elementa  ::*/
+.triple > p + p::before {
+  display: inline-block;
+  /*duodame turini*/
+  content: '';
+  /* kuriam turini*/
+  width: 1px;
+  height: 15px;
+  background-color: #fff8;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  /*keliam i virsu per puse elemento aukscio*/
+  transform: translateY(-50%);
+}
+.footer-description > a {
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  .triple {
+    flex-direction: column;
+  }
+  .triple > p + p::before {
+    display: none;
+  }
+}
+/*
+ul {
+  list-style: none;
+  float: left;
+  font-size: 20px;
+  line-height: 1.7em;
+  margin-top: 10px;
+}
+ul > li::before {
+  display: inline-block;
+  background-image: url(../img/check.png);
+  content: '';
+  object-fit: contain;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+*/

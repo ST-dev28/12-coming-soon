@@ -1,0 +1,46 @@
+.form-row {
+  display: inline-block;
+  width: 100%;
+  margin-top: 60px;
+}
+input {
+  display: inline-block;
+  background-color: unset;
+  width: 100%;
+  font-size: 18px;
+  line-height: 2.4em;
+  border: none;
+  border-bottom: 2px solid #fff9;
+  padding: 0 10px;
+}
+
+::placeholder {
+  color: #fff9;
+  font-style: italic;
+}
+.forms {
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+}
+.details,
+textarea {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 6px 0;
+  line-height: 26px;
+  font-size: 18px;
+  color: var(--color-dark);
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+textarea {
+  resize: vertical;
+  min-height: 96px;
+  max-height: 292px;
+}
+.forms ::placeholder {
+  color: var(--color-grey);
+  font-style: normal;
+}

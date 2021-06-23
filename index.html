@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming soon</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
     <link rel="stylesheet" href="./css/home.css">
 </head>
 
@@ -16,11 +17,12 @@
             <h1 class="main-title">Coming soon</h1>
             <p class="main-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptate voluptatibus animi laudantium quaerat est fugiat cupiditate adipisci quae iure.</p>
             <div id="clock_1" class="clock">CLOCK 1</div>
-            <form>
-                SUBSCRIBE FORM
-            </form>
+            <div class="form-row">
+                <input id="email" type="email" placeholder="Type your email" required>
+                <button type="submit">Subscribe Now</button>
+            </div>
             <div class="mouse">
-                MOUSE
+                <div class="slider"></div>
             </div>
         </div>
     </div>
@@ -28,18 +30,67 @@
     <main class="container">
         <div class="row-big">
             <div class="left-column">
-                LEFT COLUMN
+                <h2>About startup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eligendi ut odit iusto dignissimos <a href="#">Matrox</a> mollitia magnam alias ullam sequi?</p>
+                <div class="progress-bar">
+                    <div class="top">
+                        <div class="title">UX Design</div>
+                        <div class="value">90%</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="progress" style="width: 90%;">
+                            <div class="value"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="top">
+                        <div class="title">Web Design</div>
+                        <div class="value">85%</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="progress" style="width: 85%;">
+                            <div class="value"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="top">
+                        <div class="title">Web Development</div>
+                        <div class="value">70%</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="progress" style="width: 70%;">
+                            <div class="value"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="right-column">
-                RIGHT COLUMN
+                <h2>Have any question?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis <a href="mailto:example@email.com">example@email.com</a> iusto dignissimos officia mollitia magnam alias ullam sequi?</p>
+                <form class="forms">
+                    <input class="details" id="name" type="text" placeholder="Name" required>
+                    <input class="details" id="email" type="email" placeholder="Email" required>
+                    <textarea id="message" placeholder="Message" required maxlength="1000"></textarea>
+                    <button class="btn" type="submit">Send Message</button>
+                </form>
             </div>
         </div>
     </main>
 
     <footer class="container bg-primary">
-        <div class="row-big socials"></div>
+        <div class="row-big socials">
+            <a class="back-to-top fa fa-angle-up btn-round" href="#"></a>
+        </div>
         <div class="row-small bottom-texts">
-            LOGO + BOTTOM TEXTS
+            <img class="footer-logo" src="./img/logo-white.png" alt="Logo">
+            <div class="triple">
+                <p>Copyright &copy; 2016 <a href="#">Matrox</a></p>
+                <p>All rights reserved</p>
+                <p>Designed by <a href="#" target="_blank">TrendyTheme</a></p>
+            </div>
+            <p class="footer-description">Matrox pack complete website not just homepage. It comes with full website demos. Over <a href="#">200+</a> ready html files only fot 17$. Purchase <a href="#">Matrox</a> Now!</p>
         </div>
     </footer>
 
