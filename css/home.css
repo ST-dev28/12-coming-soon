@@ -13,6 +13,7 @@
 @import './components/mouse.css';
 @import './components/progress-bar.css';
 @import './components/button.css';
+@import './components/socials.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT */
 
@@ -97,43 +98,7 @@ main p a:hover {
 footer.container {
   padding-top: 0;
 }
-.socials {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 15px;
-  border-bottom: 1px solid var(--color-light);
-  position: relative;
-}
-.socials > .fa {
-  color: var(--color-light);
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  line-height: 40px;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 50%;
-  transition: all 0.5s;
-}
-.socials > .fa:hover {
-  background-color: var(--color-light);
-  color: var(--color-primary);
-}
-.back-to-top {
-  position: absolute;
-  top: -20px;
-  right: -10px;
-}
-.socials > .fa:first-child:hover {
-  background-color: var(--color-secondary);
-}
-@media (max-width: 640px) {
-  .back-to-top {
-    display: none;
-  }
-}
+
 .bottom-texts {
   display: flex;
   flex-direction: column;
