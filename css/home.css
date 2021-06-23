@@ -121,20 +121,19 @@ footer.container {
   background-color: var(--color-light);
   color: var(--color-primary);
 }
-.socials > .fa:first-child:hover {
-  background-color: var(--color-secondary);
-}
 .back-to-top {
   position: absolute;
   top: -20px;
   right: -10px;
+}
+.socials > .fa:first-child:hover {
+  background-color: var(--color-secondary);
 }
 @media (max-width: 640px) {
   .back-to-top {
     display: none;
   }
 }
-
 .bottom-texts {
   display: flex;
   flex-direction: column;
