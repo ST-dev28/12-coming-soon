@@ -10,12 +10,26 @@ button {
   box-shadow: 0 2px 8px #0002;
   transition: all 0.5s;
 }
-
-button:hover {
-  cursor: pointer;
-  box-shadow: 0 4px 10px #0007;
-}
 .btn {
   float: right;
   padding: 8px 20px;
+}
+.back-to-top {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  box-shadow: 0 2px 4px #0002;
+  border-radius: 50%;
+  cursor: pointer;
+}
+button:hover,
+.back-to-top:hover {
+  box-shadow: 0 4px 10px #0007;
+  background-color: var(--color-secondary);
 }

@@ -6,13 +6,13 @@ function socials(selector, data) {
     let HTML = '';
 
     for (const social of data) {
-        HTML += `<a href="${social.href}"
-                    target="_blank"
-                    class="fa fa-${social.icon}"></a>`;
+        if (social.active) {
+            HTML += `<a href="${social.href}" target="_blank" class="social fa fa-${social.icon}"></a>`;
+        }
     }
 
     // result return
-    DOM.innerHTML = HTML;
+    DOM.innerHTML += HTML;
 }
 
 export { socials }
