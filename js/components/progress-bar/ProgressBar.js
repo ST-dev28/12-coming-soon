@@ -23,7 +23,7 @@ class Progressbar {
         // jei vieta neegzistuoja, baigiam darba
         this.DOM = document.querySelector(this.selector);
         if (!this.DOM) {
-            console.error('ERROR: nerestas elementas, pagal duota selector');
+            console.error('ERROR: nerastas elementas, pagal duota selector');
             return false;
         }
         // generuojam turini ir istatome i reikiama vieta
