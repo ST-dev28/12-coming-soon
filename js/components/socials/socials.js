@@ -1,4 +1,5 @@
-function socials(selector, data) {
+// perkelta i SocialsOOP.js
+/*function socials(selector, data) {
     // validation
 
     // logic
@@ -15,4 +16,4 @@ function socials(selector, data) {
     DOM.innerHTML += HTML;
 }
 
-export { socials }
+export { socials }*/
