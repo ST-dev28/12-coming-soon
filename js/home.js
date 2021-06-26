@@ -18,7 +18,7 @@ new SocialsOOP('.socials', socialsData);
 //const big = new SocialsOOP('.socials', socialsData);
 //console.log(big);
 new Form('.hero form');
-//new Form('.main form');
+new Form('main form');
 
 /*
 let count1 = 0;

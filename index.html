@@ -17,10 +17,10 @@
             <h1 class="main-title">Coming soon</h1>
             <p class="main-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptate voluptatibus animi laudantium quaerat est fugiat cupiditate adipisci quae iure.</p>
             <div id="clock_1" class="clock">CLOCK 1</div>
-            <div class="form-row">
-                <input id="subscribe_email" type="email" placeholder="Type your email" required>
+            <form class="form-row">
+                <input data-validation="email" id="subscribe_email" type="email" placeholder="Type your email" required>
                 <button type="submit">Subscribe Now</button>
-            </div>
+            </form>
             <div class="mouse">
                 <div class="slider"></div>
             </div>
@@ -70,9 +70,9 @@
                 <h2>Have any question?</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis <a href="mailto:example@email.com">example@email.com</a> iusto dignissimos officia mollitia magnam alias ullam sequi?</p>
                 <form class="forms">
-                    <input class="details" id="message_name" type="text" placeholder="Name" required>
-                    <input class="details" id="message_email" type="email" placeholder="Email" required>
-                    <textarea id="message_text" placeholder="Message" required maxlength="1000"></textarea>
+                    <input data-validation="name" class="details" id="message_name" type="text" placeholder="Name" required>
+                    <input data-validation="email" class="details" id="message_email" type="email" placeholder="Email" required>
+                    <textarea data-validation="text" id="message_text" placeholder="Message" required maxlength="1000"></textarea>
                     <button class="btn" type="submit">Send Message</button>
                 </form>
             </div>
