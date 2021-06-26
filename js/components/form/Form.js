@@ -88,18 +88,20 @@ class Form {
         this.submitButtonDOM.addEventListener('click', (e) => {
             e.preventDefault();
             //console.log('sdfghj');
+
             // issitraukti is visu formos lauku informacija
             // eiti per visus laukus ir atpazinus informacijos tipa atlikti tos informacijos validacija
             let allGood = true;
             for (let element of this.allInputsDOM) {
-                const validationRule = element.dataset.validation;
+                const validationRule = element.dataset.validation; // sukuriam taisykle --> html prie input ivesta'data-validation'
+
                 // jei patikrinus visus laukus, nerasta nei vienos klaidos, tai "siunciam pranesima"
                 // jei patikrinus visus laukus, nerasta bent viena klaida, tai parodome visu klaidos pranesimus (kol kas, viskas pateikiama i console)
                 if (validationRule === 'email') {
                     if (this.isValidEmail(element.value) === false) {
                         console.error('ERROR: invalid email!');
                         allGood = false;
-                        break;
+                        break;  // jei randam klaida, baigiam darba, toliau neinam 
                     }
                 }
                 if (validationRule === 'name') {
@@ -112,7 +114,7 @@ class Form {
                 if (validationRule === 'text') {
                     if (this.isValidMessage(element.value) === false) {
                         allGood = false;
-                        console.error('ERROR: box cant be empty!');
+                        console.error('ERROR: message box cant be empty!');
                         break;
                     }
                 }
