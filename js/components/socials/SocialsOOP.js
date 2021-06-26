@@ -38,6 +38,7 @@ class SocialsOOP {
     }
 
     isValidData() {
+        //tikrinam, ar arejus yra arejus ir ar ne tuscias
         if (!Array.isArray(this.data) ||
             this.data.length === 0) {
             return false;
@@ -53,7 +54,7 @@ class SocialsOOP {
                     target="_blank"
                     class="social fa fa-${social.icon}"></a>`;
         }
-
+        // istatom surasta turini
         this.DOM.innerHTML += HTML;
     }
 }
