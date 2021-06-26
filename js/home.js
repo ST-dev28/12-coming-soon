@@ -1,5 +1,6 @@
 // IMPORT
 import { Clock } from "./components/clock/Clock.js";
+import { Form } from "./components/form/Form.js";
 import { Progressbar } from "./components/progress-bar/ProgressBar.js";
 //import { socials } from "./components/socials/socials.js";
 import { clockData } from "./data/clockData.js";
@@ -13,10 +14,13 @@ new Clock('#clock_1', clockData);
 //socials('footer .socials', socialsData);
 new Progressbar('.left-column', progressBarData);
 new SocialsOOP('.socials', socialsData);
-// tiktrinimui, ar randa, prilyginam konstantai
+// tiktrinimui, ar randa, prilyginam konstantai, duodam bet koki pavadinima
 //const big = new SocialsOOP('.socials', socialsData);
 //console.log(big);
+new Form('.hero form');
+//new Form('.main form');
 
+/*
 let count1 = 0;
 const timer1 = setInterval(() => {
   if (count1 < 10) {
@@ -36,3 +40,4 @@ const timer2 = setInterval(() => {
   }
 
 }, 1000)
+*/
