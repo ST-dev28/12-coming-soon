@@ -29,6 +29,7 @@ class SocialsOOP {
         // generuojam turini ir istatome i reikiama vieta
         this.render();
     }
+    // tikrinam, ar selektorius validus
     isValidSelector() {
         if (typeof this.selector !== 'string' ||
             this.selector === '') {
@@ -36,7 +37,6 @@ class SocialsOOP {
         }
         return true;
     }
-
     isValidData() {
         //tikrinam, ar arejus yra arejus ir ar ne tuscias
         if (!Array.isArray(this.data) ||
