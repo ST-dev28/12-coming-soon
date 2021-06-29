@@ -1,4 +1,6 @@
-class Toast {
+// geresnis optimalesnis TOAST variantas
+
+class Toast1 {
     constructor() {
         this.bodyDOM = document.querySelector('body');
         this.DOM = null;
@@ -6,10 +8,11 @@ class Toast {
         this.messageDOM = null;
         this.closeDOM = null;
 
+        this.timer = null;
+        this.closeDelay = 5000;
+
         this.render();
         this.addEvents();
-
-        //console.log(this);   // paziurim consoleje, kas tas toast elementas 
     }
 
     render() {
@@ -33,56 +36,41 @@ class Toast {
         this.closeDOM = this.DOM.querySelector('.fa-times');
     }
 
-    show() {
+    show(msg, title, state) {
+        if (!msg) {
+            return false;
+        }
+
+        this.DOM.dataset.state = state;
+        this.messageDOM.innerText = msg;
+        this.titleDOM.innerText = title;
+
         this.DOM.classList.remove('hide');
+
+        this.timer = setTimeout(() => {
+            this.hide();
+        }, this.closeDelay)
     }
 
     hide() {
         this.DOM.classList.add('hide');
+        clearTimeout(this.timer);
     }
 
     success(msg, title = 'Success!') {
-        if (!msg) {
-            return false;
-        }
-
-        this.show();
-        this.DOM.dataset.state = 'success';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
+        this.show(msg, title, 'success');
     }
 
     info(msg, title = 'Information!') {
-        if (!msg) {
-            return false;
-        }
-
-        this.show();
-        this.DOM.dataset.state = 'info';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
+        this.show(msg, title, 'info');
     }
 
     warning(msg, title = 'Warning!') {
-        if (!msg) {
-            return false;
-        }
-
-        this.show();
-        this.DOM.dataset.state = 'warning';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
+        this.show(msg, title, 'warning');
     }
 
     error(msg, title = 'Error!') {
-        if (!msg) {
-            return false;
-        }
-
-        this.show();
-        this.DOM.dataset.state = 'error';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
+        this.show(msg, title, 'error');
     }
 
     addEvents() {
@@ -92,4 +80,4 @@ class Toast {
     }
 }
 
-export { Toast }
+export { Toast1 }

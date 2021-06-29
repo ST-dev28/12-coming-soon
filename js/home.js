@@ -1,6 +1,7 @@
 // IMPORT
 import { Clock } from "./components/clock/Clock.js";
-import { Toast } from "./components/toast/Toast.js";
+//import { Toast } from "./components/toast/Toast.js";
+import { Toast1 } from "./components/toast/Toast1.js";
 import { Form } from "./components/form/Form.js";
 import { Progressbar } from "./components/progress-bar/ProgressBar.js";
 //import { socials } from "./components/socials/socials.js";
@@ -11,9 +12,11 @@ import { SocialsOOP } from "./components/socials/SocialsOOP.js";
 
 // EXECUTION
 //toast turi eiti aukciau formu butinai, todel geriausia iskelti ji i virsu
-const toast = new Toast;
+//const toast = new Toast;
+const toast = new Toast1;
 // toast.success('Tau pavyko!');
-toast.info('Pranesame apie si bei ta!');
+//toast.info('Pranesame apie si bei ta!');
+//toast.info('Pranesame apie si bei ta!');
 // toast.warning('Tu cia ziurek..!');
 
 // toast.error('Yra klaida!', 'Nauja antraste');
@@ -28,8 +31,9 @@ new SocialsOOP('.socials', socialsData);
 // tiktrinimui, ar randa, prilyginam konstantai, duodam bet koki pavadinima
 //const big = new SocialsOOP('.socials', socialsData);
 //console.log(big);
-new Form('.hero form');
-new Form('main form');
+new Form('.hero form', toast);
+new Form('main form', toast);
+
 
 /*
 let count1 = 0;
