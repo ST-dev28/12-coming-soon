@@ -5,6 +5,7 @@ class Progressbar {
         //console.log(this);
 
         this.DOM = null;
+        this.allBarDOM = null;
 
         this.init();
     }
@@ -28,6 +29,7 @@ class Progressbar {
         }
         // generuojam turini ir istatome i reikiama vieta
         this.render();
+        this.addEvents();
     }
     isValidSelector() {
         if (typeof this.selector !== 'string' ||
@@ -63,6 +65,24 @@ class Progressbar {
         }
 
         this.DOM.innerHTML += HTML;
+        this.allBarDOM = document.querySelectorAll('.progress-bar');
+        console.log(this.allBarDOM);
+    }
+    addEvents() {
+        window.addEventListener('scroll', () => {
+            //const scrollHigh = window.scrollY;
+            //const screenHigh = window.innerHeight;
+            const barHigh = window.innerHeight + window.scrollY;
+            for (let i = 0; i < this.allBarDOM.length; i++) {
+                const el = this.allBarDOM[i];
+                const barBottom = el.offsetHeight + el.offsetTop;
+                if (barHigh >= barBottom) {
+                    el.classList.add('loading');
+                    console.log('animuojame');
+                }
+            }
+            console.log('cvbnmasdfgh');
+        })
     }
 }
 
