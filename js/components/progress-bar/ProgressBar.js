@@ -77,7 +77,7 @@ class Progressbar {
                 const el = this.allBarDOM[i];
                 const barBottom = el.offsetHeight + el.offsetTop;
                 if (barHigh >= barBottom) {
-                    el.classList.add('loading');
+                    el.classList.add('barLoading');
                     console.log('animuojame');
                 }
             }
